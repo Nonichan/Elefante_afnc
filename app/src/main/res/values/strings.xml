@@ -13,4 +13,9 @@
 
     <string name="Minombre_string">Angel Nónigo Cisneros</string>
     <string name="Version_app">Version 4.0</string>
+
+    <string name="listaAnimales_string">Lista de animales</string>
+    <string name="misAnimales_string">Mis animales</string>
+    <string name="articulos_string">Artículos</string>
+    <string name="login_string">Login</string>
 </resources>
