@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Elefante_afnc.AppBarOverlay">
 
         <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
+            android:id="@+id/toolbar_person"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="@color/naranja_toolbar"
