@@ -9,7 +9,11 @@
         android:id="@+id/nav_lista_animales_main_Fragment"
         android:name="com.example.elefante_afnc.Nav_lista_animales_main_Fragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_nav_lista_animales_main_" />
+        tools:layout="@layout/fragment_nav_lista_animales_main_" >
+        <action
+            android:id="@+id/action_nav_lista_animales_main_Fragment_to_tabsAnimalesFragment"
+            app:destination="@id/tabsAnimalesFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_mis_animales"
         android:name="com.example.elefante_afnc.MisAnimalesFragment"
@@ -20,7 +24,11 @@
         android:name="com.example.elefante_afnc.ArticulosFragment"
         android:label="Artículos"
         tools:layout="@layout/fragment_articulos" />
-
+    <fragment
+        android:id="@+id/tabsAnimalesFragment"
+        android:name="com.example.elefante_afnc.TabsAnimalesFragment"
+        android:label="{nombre}"
+        tools:layout="@layout/fragment_tabs_animales" />
 
 
 </navigation>

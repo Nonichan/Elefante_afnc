@@ -3,11 +3,14 @@ package com.example.elefante_afnc;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -102,6 +105,23 @@ public class Nav_lista_animales_main_Fragment extends Fragment {
                 id_imagenes_animanes
         );
         list_view_animales.setAdapter(adapter);
+
+        list_view_animales.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(getActivity(),
+                        "Seleccionaste: " + nombres_animales.get(i),
+                        Toast.LENGTH_LONG).show();
+
+                Bundle bundle = new Bundle();
+                bundle.putString("nombre", nombres_animales.get(i));
+                Navigation.findNavController(view)
+                        .navigate(R.id.action_nav_lista_animales_main_Fragment_to_tabsAnimalesFragment,
+                                bundle
+                        );
+            }
+        });
+
 
         return view;
     }
