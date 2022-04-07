@@ -3,10 +3,16 @@ package com.example.elefante_afnc;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.DefaultItemAnimator;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,12 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class ArticulosFragment extends Fragment {
+    private List<Articulo> informacion;
+    private RecyclerView recyclerView;
+    private RecyclerView.Adapter adapter;
+    private RecyclerView.LayoutManager layoutManager;
+
+
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +71,39 @@ public class ArticulosFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_articulos, container, false);
+        View view = inflater.inflate(R.layout.fragment_articulos, container, false);
+        informacion = obtener_informacion();
+        recyclerView = view.findViewById(R.id.recyclerView);
+        layoutManager = new LinearLayoutManager(getContext());
+
+        adapter = new ArticulosAdapter(informacion,
+                R.layout.item_articulos,
+                new ArticulosAdapter.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(Articulo articulo, int position) {
+
+                    }
+                });
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setItemAnimator(new DefaultItemAnimator());
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setAdapter(adapter);
+        return view;
+    }
+
+    private List<Articulo> obtener_informacion(){
+        ArrayList<Articulo> lista_articulos = new ArrayList<Articulo>();
+
+        lista_articulos.add(new Articulo("Animales africanos que puedes tener de mascota,",
+                "Mascotas exoticas",
+                R.drawable.mascotas_africa,
+                "Los animales que puedes conseguir de manera totalmente legal..."));
+
+        lista_articulos.add(new Articulo("Animales más peligrosos de africa,",
+                "No querras encontrartelos de frente",
+                R.drawable.peligrosos,
+                "Los animales mas peligrosos que puedes encontrar en Africa"));
+
+        return lista_articulos;
     }
 }
