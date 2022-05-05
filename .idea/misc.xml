@@ -9,10 +9,11 @@
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/activity_main.xml" value="0.152" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/app_bar_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/content_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/dialog_animales.xml" value="0.264" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_articulos.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_gallery.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_home.xml" value="0.22509057971014493" />
-        <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_mis_animales.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_mis_animales.xml" value="0.21557971014492755" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_nav_lista_animales_main_.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_slideshow.xml" value="0.22509057971014493" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_tab_comprar_animal.xml" value="0.253125" />
@@ -20,10 +21,12 @@
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_tab_datos_animal.xml" value="0.253125" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/fragment_tabs_animales.xml" value="0.12512664640324214" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/item_articulos.xml" value="0.18703703703703703" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/item_grid_mis_animales.xml" value="0.4" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/layout/nav_header_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/menu/activity_main_drawer.xml" value="0.6" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/menu/card_menu.xml" value="0.1" />
         <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/menu/main.xml" value="0.25416666666666665" />
+        <entry key="..\:/Users/Angel/AndroidStudioProjects/Elefante_afnc/app/src/main/res/menu/mis_animales_menu.xml" value="0.25" />
       </map>
     </option>
   </component>

@@ -20,4 +20,7 @@
     <string name="login_string">Login</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="nombreEspecie">Nombre de la especie:</string>
+    <string name="colorEspecie">Color de la especie:</string>
 </resources>
