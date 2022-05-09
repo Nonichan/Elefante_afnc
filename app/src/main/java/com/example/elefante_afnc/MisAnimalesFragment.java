@@ -128,7 +128,6 @@ public class MisAnimalesFragment extends Fragment implements RealmChangeListener
                 showAlertAdd("Agrega un animal", "Escribe los datos del animal");
             }
         });
-
         return view;
     }
 
@@ -218,6 +217,4 @@ public class MisAnimalesFragment extends Fragment implements RealmChangeListener
         AlertDialog dialog = builder.create();
         dialog.show();
     }
-
-
 }
