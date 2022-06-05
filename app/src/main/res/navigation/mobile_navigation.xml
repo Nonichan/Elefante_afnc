@@ -18,7 +18,11 @@
         android:id="@+id/nav_mis_animales"
         android:name="com.example.elefante_afnc.MisAnimalesFragment"
         android:label="Mis animales"
-        tools:layout="@layout/fragment_mis_animales" />
+        tools:layout="@layout/fragment_mis_animales" >
+        <action
+            android:id="@+id/action_nav_mis_animales_to_misAnimalesNotasFragment"
+            app:destination="@id/misAnimalesNotasFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_articulos"
         android:name="com.example.elefante_afnc.ArticulosFragment"
@@ -29,6 +33,31 @@
         android:name="com.example.elefante_afnc.TabsAnimalesFragment"
         android:label="{nombre}"
         tools:layout="@layout/fragment_tabs_animales" />
+    <fragment
+        android:id="@+id/misAnimalesNotasFragment"
+        android:name="com.example.elefante_afnc.MisAnimalesNotasFragment"
+        android:label="Notas"
+        tools:layout="@layout/fragment_mis_animales_notas" />
+    <fragment
+        android:id="@+id/nav_login"
+        android:name="com.example.elefante_afnc.LoginFragment"
+        android:label="Iniciar sesión"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_nav_login_to_nav_mis_animales"
+            app:destination="@id/nav_mis_animales" />
+        <action
+            android:id="@+id/action_nav_login_to_nav_lista_animales_main_Fragment"
+            app:destination="@id/nav_lista_animales_main_Fragment" />
+        <action
+            android:id="@+id/action_nav_login_to_loginCreateUserFragment"
+            app:destination="@id/loginCreateUserFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginCreateUserFragment"
+        android:name="com.example.elefante_afnc.LoginCreateUserFragment"
+        android:label="Crear usuario"
+        tools:layout="@layout/fragment_login_create_user" />
 
 
 </navigation>

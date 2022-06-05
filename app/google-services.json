@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "1023659480865",
-    "project_id": "elefante-afnc",
-    "storage_bucket": "elefante-afnc.appspot.com"
+    "project_number": "1075678404665",
+    "project_id": "elefante-afnc-a1d05",
+    "storage_bucket": "elefante-afnc-a1d05.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:1023659480865:android:464ef58393ee6fd14c5060",
+        "mobilesdk_app_id": "1:1075678404665:android:d8fbfcc12b05957ffb2de8",
         "android_client_info": {
           "package_name": "com.example.elefante_afnc"
         }
       },
       "oauth_client": [
         {
-          "client_id": "1023659480865-b90d1uhl8ud88jsaietfram3v1o4nur6.apps.googleusercontent.com",
+          "client_id": "1075678404665-shprp7q3nu92l411ht7tnli0s5vp835e.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyB0vm9w5rO06t-som4TEp4QUj_kzM6Egt8"
+          "current_key": "AIzaSyDVQ5fVPVfcQ5txVWSZMog0ctrUO1KIZz0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "1023659480865-b90d1uhl8ud88jsaietfram3v1o4nur6.apps.googleusercontent.com",
+              "client_id": "1075678404665-shprp7q3nu92l411ht7tnli0s5vp835e.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

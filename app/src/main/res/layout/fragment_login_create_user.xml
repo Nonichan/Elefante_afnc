@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginCreateUserFragment">
+
+    <EditText
+        android:id="@+id/edit_create_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escriba el nombre de usuario"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toTopOf="@+id/edit_create_password" />
+
+    <EditText
+        android:id="@+id/edit_create_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Escriba su nuevo password"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/btn_create_user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Crear cuenta"
+        app:layout_constraintTop_toBottomOf="@+id/edit_create_password"
+        tools:layout_editor_absoluteX="-16dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

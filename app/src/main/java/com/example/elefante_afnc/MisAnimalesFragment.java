@@ -7,6 +7,7 @@ import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.ContextMenu;
 import android.view.LayoutInflater;
@@ -19,6 +20,8 @@ import android.widget.GridView;
 import android.widget.Toast;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 import io.realm.Realm;
 import io.realm.RealmChangeListener;
@@ -29,7 +32,9 @@ import io.realm.RealmResults;
  * Use the {@link MisAnimalesFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class MisAnimalesFragment extends Fragment implements RealmChangeListener<RealmResults<ModelAnimal>> {
+public class MisAnimalesFragment extends Fragment
+        implements RealmChangeListener<RealmResults<ModelAnimal>>,
+        AdapterView.OnItemClickListener{
 
 
 
@@ -109,25 +114,33 @@ public class MisAnimalesFragment extends Fragment implements RealmChangeListener
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+
         View view = inflater.inflate(R.layout.fragment_mis_animales, container, false);
 
-        gridView = view.findViewById(R.id.gridView);
-        fab = view.findViewById(R.id.fab);
-        realm = Realm.getDefaultInstance();
-        animales = realm.where(ModelAnimal.class).findAll();
-        animales.addChangeListener(this);
+        if(user != null) {
+            gridView = view.findViewById(R.id.gridView);
+            fab = view.findViewById(R.id.fab);
+            realm = Realm.getDefaultInstance();
+            animales = realm.where(ModelAnimal.class).findAll();
+            animales.addChangeListener(this);
 
-        adapter = new misAnimalesAdapter(getActivity(),
-                animales, R.layout.item_grid_mis_animales);
-        gridView.setAdapter(adapter);
-        registerForContextMenu(gridView);
+            adapter = new misAnimalesAdapter(getActivity(),
+                    animales, R.layout.item_grid_mis_animales);
+            gridView.setAdapter(adapter);
+            gridView.setOnItemClickListener(this);
+            registerForContextMenu(gridView);
 
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                showAlertAdd("Agrega un animal", "Escribe los datos del animal");
-            }
-        });
+            fab.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                    showAlertAdd("Agrega un animal", "Escribe los datos del animal");
+                }
+            });
+        }else{
+            Toast.makeText(getContext(), "No has iniciado sesion", Toast.LENGTH_SHORT).show();
+        }
         return view;
     }
 
@@ -216,5 +229,17 @@ public class MisAnimalesFragment extends Fragment implements RealmChangeListener
                 });
         AlertDialog dialog = builder.create();
         dialog.show();
+    }
+
+    @Override
+    public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+        Bundle bundle = new Bundle();
+        bundle.putInt("animalId", animales.get(i).getId());
+        String nombreycolor = animales.get(i).getNombre() + " "
+                +animales.get(i).getColor();
+        bundle.putString("nombre", nombreycolor);
+
+        Navigation.findNavController(view).navigate(R.id.action_nav_mis_animales_to_misAnimalesNotasFragment, bundle);
+
     }
 }

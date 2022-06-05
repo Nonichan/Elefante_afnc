@@ -22,6 +22,9 @@ import com.example.elefante_afnc.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
+
+    public static boolean logeado = false;
+
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
